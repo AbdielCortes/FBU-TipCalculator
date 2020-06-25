@@ -56,16 +56,10 @@
                                     <segment title="20%"/>
                                     <segment title="22%"/>
                                 </segments>
-                            </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P9S-tj-zpm">
-                                <rect key="frame" x="186" y="139" width="182" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="onEdit:" destination="BYZ-38-t0r" eventType="editingChanged" id="K9P-tc-EUh"/>
+                                    <action selector="onEdit:" destination="BYZ-38-t0r" eventType="valueChanged" id="Zsl-JX-WBl"/>
                                 </connections>
-                            </textField>
+                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgS-6I-d1q">
                                 <rect key="frame" x="260" y="454" width="108" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -73,6 +67,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P9S-tj-zpm">
+                                <rect key="frame" x="186" y="146" width="182" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="onEdit:" destination="BYZ-38-t0r" eventType="editingChanged" id="K9P-tc-EUh"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -82,6 +85,12 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tips" id="cRL-0S-6HB"/>
+                    <connections>
+                        <outlet property="billField" destination="P9S-tj-zpm" id="dGd-lj-eJN"/>
+                        <outlet property="tipControl" destination="pPY-qn-B7f" id="Pex-uf-QPD"/>
+                        <outlet property="tipLabel" destination="h5o-Dn-Vez" id="6UB-B2-xox"/>
+                        <outlet property="totalLabel" destination="qgS-6I-d1q" id="byp-Gm-SFx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Vm7-5t-cd7">
